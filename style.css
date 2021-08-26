@@ -5,23 +5,30 @@
 }
 
   
-  @media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
     /* For tablets: */
+    div#menu_mobile {
+        display:flex;
+        flex-wrap: wrap;
+    }
 
-    #menu {
+    nav#menu {
+        display:none;
         padding: 0 0;
     }
 
-    #menu ul {
+    nav#menu ul {
         margin: 0 0;
+        display:flex;
+        flex-direction: column;
+        text-align: center;
     }
 
-    #content {
-        margin:0 0;
-        padding:5% 5%;
+    nav#menu ul li {
+        width:100%;
     }
 
-    #menu ul li a {
+    nav#menu ul li a {
         width:100%; 
         font-size: 1.4em;
     }
@@ -29,10 +36,33 @@
     #logo {
         display:none;
     }
+
+    div#header {
+        margin: 0 0;
+        font-size:2em;
+    }
+    
+    div#content {
+        padding:1em 2em;
+    }
+
+    div#slogan {
+        margin: 0 0;
+        font-size:2em;
+    }
+    .grid-layout {
+        display:block;
+    }
+
+    .grid-layout .grid-item {
+        width:70%;
+        display:grid;
+        justify-content: center;
+    }
   
-  }
+}
     /* For desktop: */ /*Fix-giao-dien-cho-macpro13"*/
-  @media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1280px) {
   
 #menu ul li a {
     width:100%;
@@ -134,6 +164,22 @@ a:hover, a:visited {
 
 
 /*---Menu---*/
+#menu_mobile {
+    display:none;
+    background-color: #838383;
+    color:#fff;
+    font-size:1.5em;
+    padding:1em;
+    cursor:pointer;
+}
+#nav_bar {
+    margin-left:0;
+}
+
+#game_pad {
+    margin:auto;
+}
+
 #menu ul {
     list-style-type:none;
     text-align:center;
@@ -164,6 +210,14 @@ a:hover, a:visited {
     color:black;
 }
 
+div.inside-item-div {
+    display:none;
+    width:100%;
+    text-align: center;
+    margin:0;
+    padding:0;
+}
+/*
 #menu ul li > .inside-item {
     display:none;
     position:absolute;
@@ -174,6 +228,7 @@ a:hover, a:visited {
 #menu ul li:hover > .inside-item {
     display:block;
 }
+*/
 
 /*--End Menu--*/
 
@@ -181,14 +236,15 @@ a:hover, a:visited {
 #content {
      padding: 2em 8em;
 }
-#header {
+div#header {
     text-align: center;
     border-radius: 15px;
+    margin-top:0;
 }
 
 #header{}
 #header #logo{}
-#header, #slogan {
+div#header, #slogan {
     text-shadow:1px 1px 1px lightgray;
     color:#8997a0;
     font-size: 3em;
@@ -363,14 +419,14 @@ div#head-img > img{
     padding-left:2%;
 }
 
-#footer #up-img {
+#footer #upImg {
     float:right;
     width:50px;
     height:50px;
     border-radius: 15px;    
 }
 
-#footer #up-img:hover {
+#footer #upImg:hover {
     background:#D8d7d7;
     transition:all 1s;
     border-radius: 15px;

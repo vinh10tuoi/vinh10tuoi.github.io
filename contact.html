@@ -12,29 +12,60 @@
         <title>
             Contact
         </title>
-       <link rel="stylesheet" href="style.css"/> <!--style css-->
-       <link rel="stylesheet" href="style-contact.css"/> <!--style css-->
-       <link rel="stylesheet" href="normalize.css"/> <!--reset css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css"/> <!--style css-->
+        <link rel="stylesheet" href="style-contact.css"/> <!--style css-->
+        <link rel="stylesheet" href="normalize.css"/> <!--reset css-->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <!--JQuerry-->
+        <script>
+            $(document).ready(function() {
+                $("#upImg").click(function() {
+                    $("html, body").animate({
+                        scrollTop: 0
+                    },1500)
+                })
+            });
+
+            $(document).ready(function() {
+                $("#menu_shortcut").click(function() {
+                    $("nav#menu").slideToggle();
+                })
+            })
+
+            $(document).ready(function() {
+                $(".insidemenu_product").click(function() {
+                    $("div.inside-item-div").slideToggle();
+                })
+            })
+        </script>
     </head>
     <body>
 <div id = "container">
-        <!--phan menu item-->
-    <div id ="menu">
-        <ul>    
-            <li><a href="http://127.0.0.1:5500/index.html#head" href ="#Head" id = "head"> Trang Chủ </a></li>
-            <li>
-                <a href ="#product"> Sản phẩm </a>
-                <ul class="inside-item">
-                    <li><a href="http://127.0.0.1:5500/product.html#gaming-pc" href="#gaming-pc">Gaming PC</a></li>
-                    <li><a href="http://127.0.0.1:5500/product.html#ultrabook" href="#ultrabook">Ultrabook</a></li>
-                    <li><a href="http://127.0.0.1:5500/product.html#product" href="#console">Console</a></li>
-                </ul>
-            </li>
-            <li><a href ="#"> Hỏi đáp </a></li>
-            <li><a href ="#"> Diễn đàn </a></li>
-            <li><a href ="#contact"> Liên hệ </a></li>
-        </ul>
-    </div> <!--end menu-->
+    <!--phan menu item-->
+    <div id = "menu_shortcut">
+        <i class="fas fa-bars"></i>
+     </div>
+<nav id ="menu">
+ <ul>    
+     <li><a href ="#Head" id = "head"> Trang Chủ </a></li>
+     <li>
+         <a class = "insidemenu_product" href ="#product"> Sản phẩm </a>
+         <ul class="inside-item">
+         <div class="inside-item-div">
+             <li><a href="https://vinh10tuoi.github.io/product.html#gaming-pc" href="#gaming-pc">Gaming PC</a></li>
+             <li><a href="https://vinh10tuoi.github.io/product.html#ultrabook" href="#ultrabook">Ultrabook</a></li>
+             <li><a href="https://vinh10tuoi.github.io/product.html#console" href="#console">Console</a></li>
+         </div>
+         </ul>
+     </li>
+     <li><a href ="#"> Hỏi đáp </a></li>
+     <li><a href ="#"> Diễn đàn </a></li>
+     <li><a href = "https://vinh10tuoi.github.io/contact.html"> Liên hệ </a></li>
+ </ul>
+</nav> <!--end menu-->
+<div id = "content">
+<div>
     <h1 id="contact-us">
         Contact us
     </h1>
@@ -59,7 +90,7 @@
             <p style="text-align: justify;">As a world leading gaming brand, MSI is the most trusted name in gaming and eSports. We’ve dedicated countless hours and numerous resources to the eSports community to support the world’s most aspiring gamers and leverage their gaming expertise to optimize our product design. MSI has integrated all gamers’ coveted functions into its gaming rigs, eliminating the tedious trial and error by themselves and pushing the performance beyond limits. The determination to surpass past achievements has made MSI a ‘True Gaming’ brand throughout the industry!</p>
         </li>
         <li class="box-3">
-            <a href="#head" ><img id ="up-img" src ="img/button.png"> </a>
+            <a href="#head" ><img id ="upImg" src ="img/button.png"> </a>
             <h2 id="contact">Contact US</h2>
             <p>
                 <span><i id="icon" class="fa fa-phone"></i></span>
@@ -100,6 +131,7 @@
     <span> <img id="brand-icon" src="img/nitendo.png"/> </span>
     <span> <img id="brand-icon" src="img/xboxlogo.jpg"/> </span>
     <span> <img id="brand-icon" src="img/Sony-logo.jpg"/> </span>
+</div>
 </div>
 </div>
     </body>
