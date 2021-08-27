@@ -23,13 +23,19 @@
                 $("#upImg").click(function() {
                     $("html, body").animate({
                         scrollTop: 0
-                    },1500)
+                    },1000)
                 })
             });
 
             $(document).ready(function() {
-                $("#menu_shortcut").click(function() {
+                $("#nav_bar").click(function() {
                     $("nav#menu").slideToggle();
+                })
+            })
+
+            $(document).ready(function() {
+                $("#nav_bar").click(function() {
+                    $("#nav_bar").toggleClass("open");
                 })
             })
 
@@ -43,12 +49,18 @@
     <body>
 <div id = "container">
     <!--phan menu item-->
-    <div id = "menu_shortcut">
-        <i class="fas fa-bars"></i>
-     </div>
+    <div id = "menu_mobile">
+        <div id = "nav_bar"></div>
+        <div id = "game_pad">
+            <a href ="index.html"><i class="fas fa-gamepad"></i></a>
+        </div>
+        <div id = "phone_icon">
+            <a href="tel:0938656375" ><i class="fas fa-phone"></i></a>
+        </div>
+    </div>
 <nav id ="menu">
  <ul>    
-     <li><a href ="#Head" id = "head"> Trang Chủ </a></li>
+     <li><a href ="index.html" id = "head"> Trang Chủ </a></li>
      <li>
          <a class = "insidemenu_product" href ="#product"> Sản phẩm </a>
          <ul class="inside-item">
@@ -66,16 +78,18 @@
 </nav> <!--end menu-->
 <div id = "content">
 <div>
-    <h1 id="contact-us">
+    <h2 id="contact-us">
         Contact us
-    </h1>
+    </h2>
     <h3>
         Leave your information, we can help you 
     </h3>
-    <div>
-        <div></div>
-        <div></div>        
+    <div id="submit_form">
+        <div id = "box_form1">
+        </div>
+        <div id = "box_form2">a</div>        
     </div>
+</div>
 </div>
     <!--Phan cuoi web-->
 <div id="footer">
@@ -131,7 +145,6 @@
     <span> <img id="brand-icon" src="img/nitendo.png"/> </span>
     <span> <img id="brand-icon" src="img/xboxlogo.jpg"/> </span>
     <span> <img id="brand-icon" src="img/Sony-logo.jpg"/> </span>
-</div>
 </div>
 </div>
     </body>

@@ -18,9 +18,11 @@
     }
 
     nav#menu ul {
+        list-style: none;
         margin: 0 0;
         display:flex;
         flex-direction: column;
+        flex-wrap: wrap;
         text-align: center;
     }
 
@@ -30,25 +32,35 @@
 
     nav#menu ul li a {
         width:100%; 
-        font-size: 1.4em;
+        font-size: 1em;
+    }
+
+    #menu_mobile .fa-gamepad, .fa-phone{
+        color:#fff;
     }
 
     #logo {
         display:none;
     }
 
-    div#header {
-        margin: 0 0;
-        font-size:2em;
-    }
-    
     div#content {
-        padding:1em 2em;
+        padding:0.5em 0.5em !important;
+    }
+
+    div#content #header{
+        font-size:1.5em;
+        width:100%;
+        text-align: center;
+        margin:0 0;
     }
 
     div#slogan {
         margin: 0 0;
-        font-size:2em;
+        font-size:1.5em;
+    }
+
+    div#intro .first3word{
+        font-size:1em;
     }
     .grid-layout {
         display:block;
@@ -59,19 +71,37 @@
         display:grid;
         justify-content: center;
     }
+    
+    div#footer, div#underfooter {
+        font-size:65%;
+    }
+
+    div#footer ul li {
+        width:100% !important;
+        padding:0 0;
+    } 
+
+    div#underfooter > span {
+        display: none;
+    }
   
 }
-    /* For desktop: */ /*Fix-giao-dien-cho-macpro13"*/
+
+/* For desktop: */ /*Fix-giao-dien-cho-macpro13"*/
 @media screen and (max-width: 1280px) {
-  
 #menu ul li a {
     width:100%;
-    }
+}
 
 #menu ul {
     width:100%;
     padding-left:0;
     display:inline-block;
+    margin-bottom: 0;
+}
+
+div#header {
+    margin:0 !important;
 }
  
 #intro p {
@@ -136,7 +166,7 @@
 .grid-layout .item-img {
        width:30%;
    }
-  }
+ }
 /*end media fix*/
 
 body {
@@ -168,13 +198,49 @@ a:hover, a:visited {
     display:none;
     background-color: #838383;
     color:#fff;
-    font-size:1.5em;
+    font-size:1em;
     padding:1em;
     cursor:pointer;
 }
 #nav_bar {
-    margin-left:0;
+    width:20px;
+    height:20px;
+    background: #838383;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    cursor: pointer;
 }
+
+#nav_bar::before {
+    content: "";
+    width: 12px;
+    height:1px;
+    background-color: #fff;
+    position:absolute;
+    transform: translateY(-3px);
+    transition: 0.25s ease-in-out;
+}
+
+#nav_bar::after {
+    content: "";
+    width: 12px;
+    height:1px;
+    background-color: #fff;
+    position:absolute;
+    transform: translateY(3px);
+    transition: 0.25s ease-in-out;
+}
+
+#nav_bar.open::before{
+    transform: rotate(45deg);
+}
+
+#nav_bar.open::after{
+    transform: rotate(-45deg);
+}
+
 
 #game_pad {
     margin:auto;
@@ -234,7 +300,7 @@ div.inside-item-div {
 
 /*--Content--*/
 #content {
-     padding: 2em 8em;
+     padding: 0em 2em 0em 2em;
 }
 div#header {
     text-align: center;
@@ -410,9 +476,9 @@ div#head-img > img{
 /*--Phan-Footer--*/
 #footer {
     font-size:85%;
-    border-top:2px solid #D8D7D7;
     color:#838383;
-    padding:0;
+    padding:1em 0em;
+    background-color:#f5f5f7;
 }
 
 #footer ul {
@@ -445,10 +511,12 @@ div#head-img > img{
 }
 
 /*--underfooter--*/
+div#underfooter {
+    text-align: center;
+}
 
 #underfooter {
-    font-size:85%;
-    border-top:2px solid #D8D7D7;
+    font-size:100%;
     color:#838383;
     padding:0;
 }

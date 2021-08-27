@@ -46,3 +46,20 @@ body {
     font-size:4em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+#submit_form {
+    display: flex;
+}
+#submit_form #box_form1, #box_form2 {
+    float: left;
+    display:flex;
+}
+
+#box_form1 {
+    width:33%;
+    height:100%;
+}
+
+div#contact-us-img {
+    width: 100px;
+}
+
