@@ -15,11 +15,21 @@
         <link rel="stylesheet" href="style.css"/> <!--style css-->
         <link rel="stylesheet" href="style-product.css"/> <!--style product css-->
         <link rel="stylesheet" href="normalize.css"/> <!--reset css-->
+        <link rel="stylesheet" href="mobile.css"/> <!--Resposive-->
         <script src="js/jquery-3.6.0.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!--JQuerry-->
         <script>
             $(document).ready(function() {
+                $("#upImg").hide()
+
+                $(window).scroll(function () {
+                    if($(this).scrollTop() >= 500   )
+                        $("#upImg").show("slow")
+                    else
+                        $("#upImg").hide("slow")
+                })
+
                 $("#upImg").click(function() {
                     $("html, body").animate({
                         scrollTop: 0
@@ -53,6 +63,9 @@
         </script>
     </head>
     <body>
+        <div>
+            <a id = "gototop" href="javascript:;"><img id ="upImg" src ="img/button.png"> </a>
+        </div>
         <div id = "container">
              <!--phan menu item-->
              <div id = "menu_mobile">
@@ -66,9 +79,9 @@
             </div>
      <nav id ="menu">
          <ul>    
-             <li><a href ="index.html" id = "head"> Trang Chủ </a></li>
+             <li><a href ="index.html" id = "head"> Home </a></li>
              <li>
-                 <a class = "insidemenu_product"> Sản phẩm </a>
+                 <a class = "insidemenu_product"> Product </a>
                  <ul class="inside-item">
                  <div class="inside-item-div">
                      <li><a href="product.html#gaming-pc" href="#gaming-pc">Gaming PC</a></li>
@@ -77,9 +90,9 @@
                  </div>
                  </ul>
              </li>
-             <li><a href ="#"> Hỏi đáp </a></li>
-             <li><a href ="#"> Diễn đàn </a></li>
-             <li><a href = "contact.html"> Liên hệ </a></li>
+             <li><a href ="news.html"> News </a></li>
+             <li><a href ="#"> About Us </a></li>
+             <li><a href = "contact.html"> Contact </a></li>
          </ul>
      </nav> <!--end menu-->
      <div id = "content">
@@ -102,11 +115,13 @@
                             <img class = "item-img" src="img/meg5x5.png"/>
                         </div>
                         <h4 class="item-name">MSI MEG TRIDENT X 11th</h4>
-                        <pre>
+                        <h5>
 GPU : Nvidia GeForce RTX 3080
+<br>
 Processor: Intel Core i7-11700K
+<br>
 Ram: 32GB
-                        </pre>
+                        </h5>
                         <p class="item-price">Price: $2799</p>
                         <a class="button">Buy</a>
                     </div>
@@ -121,11 +136,13 @@ Ram: 32GB
                             <img class = "item-img" src="img/codexx5.png"/>
                         </div>
                         <h4 class="item-name">MSI MEG CODEX X5 11th</h4>
-                        <pre>
+                        <h5>
 GPU: Nvidia GeForce 3070
+<br>
 Processor: Intel Core i7-11700
+<br>
 Ram: 32GB
-                        </pre>
+                        </h5>
                         <p class="item-price">Price: $2599</p>
                         <a class="button">Buy</a>
                     </div>
@@ -140,11 +157,13 @@ Ram: 32GB
                             <img class = "item-img" src="img/aegis1.png"/>
                         </div>
                         <h4 class="item-name">MSI MEG AEGIS Ti5 11th</h4>
-                        <pre>
+                        <h5>
 GPU: Nvidia GeForce RTX 3090
+<br>
 Processor: Intel Core i9-11900K
+<br>
 Ram: 32GB
-                        </pre>
+                        </h5>
                         <p class="item-price">Price: $4000</p>
                         <a class="button">Buy</a>
                     </div>
@@ -159,11 +178,13 @@ Ram: 32GB
                             <img class = "item-img" src="img/orion90000.png"/>
                         </div>
                         <h4 class="item-name">ACER PREDATOR ORION 9000</h4>
-                        <pre>
+                        <h5>
 GPU: Nvidia GeForce RTX 3090
+<br>
 Processor: Intel Core i9-10900X
+<br>
 Ram: 64GB
-                        </pre>
+                        </h5>
                         <p class="item-price">Price: $5099</p>
                         <a class="button">Buy</a>
                     </div>
@@ -178,11 +199,13 @@ Ram: 64GB
                             <img class = "item-img" src="img/predator-orion-5000-po5-605s-gallery-02_1.png"/>
                         </div>
                         <h4 class="item-name">ACER PREDATOR ORION 5000</h4>
-                        <pre>
+                        <h5>
 GPU: Nvidia GeForce RTX 2080Ti
-Processor: Intel Core i7-9700k
+<br>
+Processor: Intel Core i7-9700K
+<br>
 Ram: 16GB
-                        </pre>
+                        </h5>
                         <p class="item-price">Price: $2399</p>
                         <a class="button">Buy</a>
                     </div>
@@ -197,11 +220,13 @@ Ram: 16GB
                             <img class = "item-img" src="img/r122-removebg-preview.png"/>
                         </div>
                         <h4 class="item-name">ALIENWARE AURORA R12</h4>
-                        <pre>
+                        <h5>
 GPU: Nvidia GeForce RTX 3070
-Processor: Intel Core i7-11700KF   
+<br>
+Processor: Intel Core i7-11700KF  
+<br> 
 Ram: 32GB
-                        </pre>
+                        </h5>
                         <p class="item-price">Price: $2799</p>
                         <a class="button">Buy</a>
                     </div>
@@ -216,11 +241,13 @@ Ram: 32GB
                             <img class = "item-img" src="img/unnamed-removebg-preview.png"/>
                         </div>
                         <h4 class="item-name">ASUS ROG HURACAN G21CX</h4>
-                        <pre>
+                        <h5>
 GPU: Nvidia GeForce RTX 3070
-Processor: Intel Core i9-9900k  
+<br>
+Processor: Intel Core i9-9900K 
+<br>
 Ram: 32GB
-                        </pre>
+                        </h5>
                         <p class="item-price">Price: $3099</p>
                         <a class="button">Buy</a>
                     </div>
@@ -235,11 +262,13 @@ Ram: 32GB
                             <img class = "item-img" src="img/375F6A34-6416-40B9-AA51-8C36667FCEC6.png"/>
                         </div>
                         <h4 class="item-name">ASUS ROG STRIX GT35 </h4>
-                        <pre>
+                        <h5>
 GPU: Nvidia GeForce RTX 3080Ti
+<br>
 Processor: Intel Core i9-10900KF
+<br>
 Ram: 32GB
-                        </pre>
+                        </h5>
                         <p class="item-price">Price: $3799</p>
                         <a class="button">Buy</a>
                     </div>
@@ -254,11 +283,13 @@ Ram: 32GB
                             <img class = "item-img" src="img/nzxtrgb.png"/>
                         </div>
                         <h4 class="item-name">NZXT Creator RGB </h4>
-                        <pre>
+                        <h5>
 GPU: Nvidia GeForce RTX 3090
+<br>
 Processor: Intel Core i9-11900K
+<br>
 Ram: 64GB
-                        </pre>
+                        </h5>
                         <p class="item-price">Price: $3999</p>
                         <a class="button">Buy</a>
                     </div>
@@ -283,11 +314,13 @@ Ram: 64GB
                             <img class = "item-img" src="img/637407967465471535_mba-2020-gold-1-removebg-preview.png"/>
                         </div>
                         <h4 class="item-name">MacBook Air M1 2020</h4>
-                        <pre>
+                        <h5>
 13.3" Retina Display
+<br>
 Processor: Apple M1
+<br>
 Ram: 16GB
-                        </pre>
+                        </h5>
                         <p class="item-price">Price: $1649</p>
                         <a class="button">Buy</a>
                     </div>
@@ -302,11 +335,13 @@ Ram: 16GB
                             <img class = "item-img" src="img/resize.png"/>
                         </div>
                         <h4 class="item-name">MacBook Pro 13" 2020</h4>
-                        <pre>
+                        <h5>
 13.3" Retina Dislay
+<br>
 Processor: Apple M1
+<br>
 Ram: 16GB
-                        </pre>
+                        </h5>
                         <p class="item-price">Price: $2699</p>
                         <a class="button">Buy</a>
                     </div>
@@ -321,12 +356,15 @@ Ram: 16GB
                             <img class = "item-img" src="img/500x500.png"/>
                         </div>
                         <h4 class="item-name">MacBook Pro 16" 2020</h4>
-                        <pre>
+                        <h5>
 16" Retina Display
+<br>
 GPU: 8GB HBM2 AMD Radeon Pro 5600M
+<br>
 Processor: 8-core Intel Core i9
+<br>
 Ram: 64GB
-                        </pre>
+                        </h5>
                         <p class="item-price">Price: $6699</p>
                         <a class="button">Buy</a>
                     </div>
@@ -341,12 +379,15 @@ Ram: 64GB
                             <img class = "item-img" src="img/XPS-17-1200x1200-removebg-preview.png"/>
                         </div>
                         <h4 class="item-name">DELL XPS 17 9700</h4>
-                        <pre>
+                        <h5>
 17" UHD+ Display 
+<br>
 GPU: Nvidia GeForce RTX 2060
+<br>
 Processor: Intel Core i9-10885H
+<br>
 Ram: 32GB
-                        </pre>
+                        </h5>
                         <p class="item-price">Price: $3399</p>
                         <a class="button">Buy</a>
                     </div>
@@ -361,12 +402,15 @@ Ram: 32GB
                             <img class = "item-img" src="img/proart.png"/>
                         </div>
                         <h4 class="item-name">ASUS ProArt StudioBook 17</h4>
-                        <pre>
+                        <h5>
 17" WUXGA Anti-Glare Display
+<br>
 GPU: Nvidia Quadro RTX 3000
+<br>
 Processor: Intel Core i7-9750H
+<br>
 Ram: 16GB ECC DDR4
-                        </pre>
+                        </h5>
                         <p class="item-price">Price: $2399</p>
                         <a class="button">Buy</a>
                     </div>
@@ -598,7 +642,6 @@ Ram: 10GB
                 <p style="text-align: justify;">As a world leading gaming brand, Gaming Ace is the most trusted name in gaming and eSports. We’ve dedicated countless hours and numerous resources to the eSports community to support the world’s most aspiring gamers and leverage their gaming expertise to optimize our product design. MSI has integrated all gamers’ coveted functions into its gaming rigs, eliminating the tedious trial and error by themselves and pushing the performance beyond limits. The determination to surpass past achievements has made MSI a ‘True Gaming’ brand throughout the industry!</p>
             </li>
             <li class="box-3">
-                <a id = "gototop" href="javascript:;"><img id ="upImg" src ="img/button.png"> </a>
                 <h2 id="contact">Contact US</h2>
                 <p>
                     <span><i id ="icon" class="fas fa-phone-alt"></i></span>

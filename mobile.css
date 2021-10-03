@@ -1,0 +1,188 @@
+/*For mobile design*/
+@media screen and (max-width: 768px) {
+    /* For tablets: */
+    div#menu_mobile {
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+    nav#menu {
+        display:none;
+        padding: 0 0;
+    }
+
+    nav#menu ul {
+        list-style: none;
+        margin: 0 0;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    nav#menu ul li {
+        width:100%;
+    }
+
+    nav#menu ul li a {
+        width:100%; 
+        font-size: 1em;
+    }
+
+    #menu_mobile .fa-gamepad, .fa-phone{
+        color:#fff;
+    }
+
+    #logo {
+        display:none;
+    }
+
+    #product {
+        font-size: 35px !important;
+        padding: 70px 0 !important;
+    }
+
+    #gaming-pc {
+        font-size: 35px !important;
+        padding: 70px 0 !important;
+    }
+
+    #ultrabook {
+        font-size: 35px !important;
+        padding: 70px 0 !important;
+    }
+
+    #console {
+        font-size: 35px !important;
+        padding: 70px 0 !important;
+    }
+
+    div#content {
+        padding:0.5em 0.5em !important;
+    }
+
+    div#content #header{
+        font-size:1.5em;
+        width:100%;
+        text-align: center;
+        margin:0 0;
+    }
+
+    div#slogan {
+        margin: 0 0;
+        font-size:1.5em;
+    }
+
+    div#intro .first3word{
+        font-size:1em;
+    }
+    .grid-layout {
+        display:block;
+    }
+
+    div#content .grid-layout .grid-item {
+        width:100%;
+        display:flex;
+        justify-content: center;
+    }
+    
+    div#footer, div#underfooter {
+        font-size:65%;
+    }
+
+    div#footer ul li {
+        width:100% !important;
+        padding:0 0;
+    } 
+
+    div#underfooter > span {
+        display: none;
+    }
+  
+}
+
+/* For desktop: */ /*Fix-giao-dien-cho-macpro13"*/
+@media screen and (max-width: 1440px) {
+    #menu ul li a {
+        width:100%;
+    }
+    
+    #menu ul {
+        width:100%;
+        padding-left:0;
+        display:block;
+        margin:1em 0 0.5em 0;
+    }
+    
+    div#header {
+        margin:0 !important;
+    }
+     
+    #intro p {
+        width:100%;
+        text-align: center;
+    }
+    
+    #intro #img-3 {
+        align-items:center;
+        display:flex;
+        justify-content: center;
+        width:100%;
+        height:100%;
+    }
+    
+    #intro {
+        max-width: 100%;
+        width: 100%;
+        height:auto;
+        overflow: auto;
+       }   
+     
+    #intro #box1{
+        float:left;
+        max-width: 33%;
+        width: 33%;
+        height:50%;
+    }  
+    #intro #box2{
+        float:left;
+        max-width: 33%;
+        width: 33%;
+        height:50%;
+    }  
+    #intro #box3{
+        float:right;
+        max-width: 33%;
+        width: 33%;
+        height:50%;
+    }  
+    
+    #intro .first3word {
+        text-align:center;
+    }
+    
+    .row .col p {
+           margin:0;
+           padding-top:2em; 
+           border:0;
+       }
+    
+    #intro {
+        display:flex;
+        flex-wrap:wrap;
+        float:center;
+       }
+    
+    div.grid-layout {
+        width: 100%;
+    }
+    
+    div#content .grid-item {
+        width: 31.75%;
+    }
+    
+    div.grid-layout .item-img {
+           width:100%;
+       }
+     }
+/*end media fix*/

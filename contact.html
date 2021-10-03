@@ -16,10 +16,23 @@
         <link rel="stylesheet" href="style.css"/> <!--style css-->
         <link rel="stylesheet" href="style-contact.css"/> <!--style css-->
         <link rel="stylesheet" href="normalize.css"/> <!--reset css-->
+        <link rel="stylesheet" href="mobile.css"/> <!--Resposive-->
+        <link rel='stylesheet' href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+        <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script> <!--Wowjs-->
         <script src="js/jquery-3.6.0.min.js"></script>
         <!--JQuerry-->
+        <script> new WOW().init(); </script> <!--call wowjs-->
         <script>
             $(document).ready(function() {
+                $("#upImg").hide()
+
+                $(window).scroll(function () {
+                    if($(this).scrollTop() >= 500   )
+                        $("#upImg").show("slow")
+                    else
+                        $("#upImg").hide("slow")
+                })
+
                 $("#upImg").click(function() {
                     $("html, body").animate({
                         scrollTop: 0
@@ -47,6 +60,9 @@
         </script>
     </head>
     <body>
+    <div>
+            <a id = "gototop" href="javascript:;"><img id ="upImg" src ="img/button.png"> </a>
+    </div>
 <div id = "container">
     <!--phan menu item-->
     <div id = "menu_mobile">
@@ -60,34 +76,69 @@
     </div>
 <nav id ="menu">
  <ul>    
-     <li><a href ="index.html" id = "head"> Trang Chủ </a></li>
+     <li><a href ="index.html" id = "head"> Home </a></li>
      <li>
-         <a class = "insidemenu_product" href ="#product"> Sản phẩm </a>
+         <a class = "insidemenu_product" href ="#product"> Product </a>
          <ul class="inside-item">
          <div class="inside-item-div">
-             <li><a href="https://vinh10tuoi.github.io/product.html#gaming-pc" href="#gaming-pc">Gaming PC</a></li>
-             <li><a href="https://vinh10tuoi.github.io/product.html#ultrabook" href="#ultrabook">Ultrabook</a></li>
-             <li><a href="https://vinh10tuoi.github.io/product.html#console" href="#console">Console</a></li>
+             <li><a href="product.html#gaming-pc" href="#gaming-pc">Gaming PC</a></li>
+             <li><a href="product.html#ultrabook" href="#ultrabook">Ultrabook</a></li>
+             <li><a href="product.html#console" href="#console">Console</a></li>
          </div>
          </ul>
      </li>
-     <li><a href ="#"> Hỏi đáp </a></li>
-     <li><a href ="#"> Diễn đàn </a></li>
-     <li><a href = "https://vinh10tuoi.github.io/contact.html"> Liên hệ </a></li>
+     <li><a href ="news.html"> News </a></li>
+     <li><a href =""> About Us </a></li>
+     <li><a href = "contact.html"> Contact </a></li>
  </ul>
 </nav> <!--end menu-->
+<!--Contact-img-->
+<div id = "contact-us-img">
+    <img src="img/contact-us-img.jpg"/>
+</div>
+
 <div id = "content">
 <div>
     <h2 id="contact-us">
         Contact us
     </h2>
-    <h3>
-        Leave your information, we can help you 
-    </h3>
     <div id="submit_form">
         <div id = "box_form1">
+            <form>
+                <h3>Get in touch with us</h3>
+                <div class="div5over">
+                <div class ="div5">
+                    <label>FIRST NAME</label>
+                    <br>
+                    <input type="text" id="text_box" required/>
+                </div>
+                <div class ="div5">
+                    <label>LAST NAME</label>
+                    <br>
+                    <input type="text" id="text_box" required/>
+                </div>
+                </div>
+                <div class="div8">
+                    <label>EMAIL ADDRESS</label>
+                    <br>
+                    <input type="email" id="text_box1" required/>
+                </div>
+                <div class="div10">
+                    <label>SUBJECT</label>
+                    <br>
+                    <input type="subject" id="text_box1"     required/>
+                </div>
+                <div class="div10">
+                    <label>MESSAGE</label>
+                    <br>
+                    <textarea id="message" name="message" placeholder=""></textarea>    
+                </div>
+                <button class="submit_button">Submit</button>
+            </form>
         </div>
-        <div id = "box_form2">a</div>        
+        <div id = "box_form2">
+            <img src="img/contacthome.jpeg"/>
+        </div>        
     </div>
 </div>
 </div>
@@ -104,7 +155,6 @@
             <p style="text-align: justify;">As a world leading gaming brand, MSI is the most trusted name in gaming and eSports. We’ve dedicated countless hours and numerous resources to the eSports community to support the world’s most aspiring gamers and leverage their gaming expertise to optimize our product design. MSI has integrated all gamers’ coveted functions into its gaming rigs, eliminating the tedious trial and error by themselves and pushing the performance beyond limits. The determination to surpass past achievements has made MSI a ‘True Gaming’ brand throughout the industry!</p>
         </li>
         <li class="box-3">
-            <a href="#head" ><img id ="upImg" src ="img/button.png"> </a>
             <h2 id="contact">Contact US</h2>
             <p>
                 <span><i id="icon" class="fa fa-phone"></i></span>
@@ -118,15 +168,15 @@
                 Find us on
             </h2>
             <h3>
-                <span><i id="icon" class="fa fa-facebook-square"></i></span>
+                <span><i id = "icon" class="fab fa-facebook-square"></i></span>
                 <span>  Facebook </span>
             </h3>
             <h3>
-                <span><i id="icon" class="fa fa-instagram"></i></span>
+                <span><i id="icon" class="fab fa-instagram"></i></span>
                 <span>  Instagram </span>
             </h3>
             <h3>
-                <span><i id="icon" class="fa fa-twitter"></i></span>
+                <span><i id="icon" class="fab fa-twitter"></i></span>
                 <span> Twitter </span>
             </h3>
         </li>

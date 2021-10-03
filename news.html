@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <!--Phan dau web-->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8"/>
+        <meta name="gaming" name="game thu" content ="Gaming Gear" />
+        <meta http-equiv="refresh" content="1800"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href = "img/icon1.jpg" rel = "shortcut icon"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>
+            Demo Website!!
+        </title>
+        <link rel="stylesheet" href="style.css"/> <!--style css-->
+        <link rel="stylesheet" href="normalize.css"/> <!--reset css-->
+        <link rel="stylesheet" href="mobile.css"/> <!--Resposive-->
+        <link rel="stylesheet" href="style-news.css"/> <!--style css-->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <!--JQuerry-->
+        <script>
+            $(document).ready(function() {
+                $("#upImg").hide()
+
+                $(window).scroll(function () {
+                    if($(this).scrollTop() >= 300)
+                        $("#upImg").show("slow")
+                    else
+                        $("#upImg").hide("slow")
+                })
+
+                $("#upImg").click(function() {
+                    $("html, body").animate({
+                        scrollTop: 0
+                    },1000)
+                })
+            });
+
+            $(document).ready(function() {
+                $("#nav_bar").click(function() {
+                    $("nav#menu").slideToggle();
+                })
+            })
+
+            $(document).ready(function() {
+                $("#nav_bar").click(function() {
+                    $("#nav_bar").toggleClass("open");
+                })
+            })
+
+            $(document).ready(function() {
+                $(".insidemenu_product").click(function() {
+                    $("div.inside-item-div").slideToggle();
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div>
+            <a id = "gototop" href="javascript:;"><img id ="upImg" src ="img/button.png"> </a>
+        </div>
+        <!--phan menu item-->
+        <div id = "menu_mobile">
+            <div id = "nav_bar"></div>
+            <div id = "game_pad">
+                <a href ="index.html"><i class="fas fa-gamepad"></i></a>
+            </div>
+            <div id = "phone_icon">
+                <a href="tel:0938656375" ><i class="fas fa-phone"></i></a>
+            </div>
+        </div>
+        <nav id ="menu">
+            <ul>    
+                <li><a href ="index.html" id = "head"> Home </a></li>
+                <li>
+                    <a class = "insidemenu_product" href ="#product"> Product </a>
+                    <ul class="inside-item">
+                    <div class="inside-item-div">
+                        <li><a href="product.html#gaming-pc" href="#gaming-pc">Gaming PC</a></li>
+                        <li><a href="product.html#ultrabook" href="#ultrabook">Ultrabook</a></li>
+                        <li><a href="product.html#console" href="#console">Console</a></li>
+                    </div>
+                    </ul>
+                </li>
+                <li><a href ="news.html"> News </a></li>
+                <li><a href ="news.html"> About Us </a></li>
+                <li><a href = "contact.html"> Contact </a></li>
+            </ul>
+        </nav> <!--end menu-->
+<div id="content">
+    <p>News</p>
+    <div class="news_layout">
+        <div class="news_detail">
+            <img src="img/news-img.jpeg"/>
+            <h3>
+                2021 Back to School Buying Guide: How to shop for the best PC components
+            </h3>
+            <p>
+                [Global announcement] Back to School season is around the corner, which also means it is time to sort all of your back-to-school needs. Here MSI
+            </p>
+        </div>
+        <div class="news_detail">
+            <img src="img/newsimg1.jpeg"/>
+            <h3>
+                MSI and Monster Energy Yamaha MotoGP eSport Join Forces In Endless Quest for Ultimate Performance & Precise Control
+            </h3>
+            <p>
+                [Taipei, Taiwan] MSI announced the partnership with Monster Energy Yamaha MotoGP eSport Team! MSI’s innovative products with high performance in the eSport industry are unanimously [...]
+            </p>
+        </div>
+        <div class="news_detail">
+            <img src="img/newsimg2.jpeg"/>
+            <h3>
+                MSI Unveils Series of New X570S Motherboards to Blow Your Mind
+            </h3>
+            <p>
+                [Taipei, Taiwan] With AMD launching the latest Ryzen 5000 Series processors, MSI X570S motherboards will also hit the market in the coming days. The new series of MSI X570S motherboards have not only upgraded specifications but also included brand-new designs. The following are detailed introductions that you must not miss.
+            </p>
+        </div>
+        <div class="news_detail">
+            <img src="img/newsimg3.jpeg"/>
+            <h3>
+                Ryzen 5000 G-Series Processors Are Now Available, So Do 500 And 400 Series Motherboards BIOS   
+            </h3>
+            <p>
+                [Taipei, Taiwan] Excitingly, the AMD Ryzen 5000 G-Series processors are now available for DIY users. The Ryzen 5000 G-Series processors are based on 7nm Zen [...]
+            </p>
+        </div>
+        <div class="news_detail">
+            <img src="img/newsimg4.jpeg"/>
+            <h3>
+                Join MSI 35th Anniversary Celebration to Win Grand Prize
+            </h3>
+            <p>
+                Celebrate with MSI from Aug 4th to Sep 8th to get 3.5X bonus points and grand prize raffles![Taipei, Taiwan] MSI, a world leader in gaming, [...]   
+            </p>
+        </div>
+        <div class="news_detail">
+            <img src="img/newsimg5.jpeg"/>
+            <h3>
+                MSI reveals custom AMD Radeon™ RX 6600 XT series graphics cards            
+            </h3>
+            <p>
+                [Taipei, Taiwan] As a leading brand in True Gaming hardware, [...]
+            </p>
+        </div>
+        <div class="news_detail">
+            <img src="img/newsimg6.jpeg"/>
+            <h3>
+                Enjoyable gaming doesn’t need to come at the cost of noise: MSI’s MPG QUIETUDE 100S silent gaming PC case is here.            
+            </h3>
+            <p>
+                For people that want a modest and more reserved setup while [...]            
+            </p>
+        </div>
+        <div class="news_detail">
+            <img src="img/newsimg7.jpeg"/>
+            <h3>
+                MSI Summer Promotion 2021: Beat the Heat with Cool Treats
+            </h3>
+            <p>
+                This summer might be a tough break, however, MSI always back you up. Upgrade your pc with the hottest promotion in 2021, get ready to [...]            
+            </p>
+        </div>
+        <div class="news_detail">
+            <img src="img/newsimg8.jpeg"/>
+            <h3>
+                MSI GeForce RTX 30 Ti Graphics Card Family Assembles For Duty
+            </h3>
+            <p>
+                [Taipei, Taiwan] As a leading brand in True Gaming hardware, MSI is announcing new graphics cards powered by NVIDIA®’s newly-launched GeForce® RTX™ 3080 Ti and [...]            
+            </p>
+        </div>
+    </div>
+</div>
+        <!--Phan cuoi web-->
+<div id="footer">
+    <ul>
+        <li class="box-1">
+            <h2 id="contact">Our Location</h2>
+            <p><i id="icon" class="fa fa-location-arrow"></i> : 371 Nguyen Kiem, Ward 3, Go Vap District</p>
+            <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9251197291946!2d106.67491891523737!3d10.817042392293988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e1f241211f%3A0xc9ef195798144b1f!2sHo%20Chi%20Minh%20City%20Open%20University!5e0!3m2!1sen!2s!4v1626953478520!5m2!1sen!2s" width="90%" height="110%" style="border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
+        </li>
+        <li class="box-2">
+            <h2 id="about-us">About US</h2>
+            <p style="text-align: justify;">As a world leading gaming brand, Gaming Ace is the most trusted name in gaming and eSports. We’ve dedicated countless hours and numerous resources to the eSports community to support the world’s most aspiring gamers and leverage their gaming expertise to optimize our product design. MSI has integrated all gamers’ coveted functions into its gaming rigs, eliminating the tedious trial and error by themselves and pushing the performance beyond limits. The determination to surpass past achievements has made MSI a ‘True Gaming’ brand throughout the industry!</p>
+        </li>
+        <li class="box-3">
+            <h2 id="contact">Contact US</h2>
+            <p>
+                <span><i id ="icon" class="fas fa-phone-alt"></i></span>
+                <span> : +84 938 656 375 </span>
+            </p>
+            <p>
+                <span><i id="icon" class="fa fa-envelope"></i></span>
+                <a href="mailto:vinhtruong1982002@gmail.com"> : vinhtruong1982002@gmail.com</a>
+            </p>
+            <h2>
+                Find us on
+            </h2>
+            <h3>
+                <span><i id = "icon" class="fab fa-facebook-square"></i></span>
+                <span>  Facebook </span>
+            </h3>
+            <h3>
+                <span><i id="icon" class="fab fa-instagram"></i></span>
+                <span>  Instagram </span>
+            </h3>
+            <h3>
+                <span><i id="icon "class="fab fa-twitter"></i></span>
+                <span> Twitter </span>
+            </h3>
+        </li>
+    </ul>
+</div>
+<!--Underfooter-->
+<div id = "underfooter">
+    <p>Copyright &copy; 2021 Truong Quoc Vinh</p>
+    <span> <img id="brand-icon" src="img/msiicon.png"/> </span>
+    <span> <img id="brand-icon" src="img/asusicon.png"/> </span>
+    <span> <img id="brand-icon" src="img/alw.png "/> </span>
+    <span> <img id="brand-icon" src="img/nzxt logo.jpg"/> </span>
+    <span> <img id="brand-icon" src="img/Apple-Logo-1.png"/> </span>
+    <span> <img id="brand-icon" src="img/Microsoft-Logo-dumps-questions.jpg"/> </span>
+    <span> <img id="brand-icon" src="img/download.png"/> </span>
+    <span> <img id="brand-icon" src="img/nitendo.png"/> </span>
+    <span> <img id="brand-icon" src="img/xboxlogo.jpg"/> </span>
+    <span> <img id="brand-icon" src="img/Sony-logo.jpg"/> </span>
+</div>
+    </body>
+</html>
