@@ -73,6 +73,62 @@
         text-align: center;
         margin:0 0;
     }
+    
+    /* fix layout news page */
+    div.news_layout .news_detail {
+       width:100% !important;
+    }
+
+    /* Fix trang contact */
+    #contact-us {
+        font-size: 45px;
+    }
+    #submit_form {
+        padding: 0 0 !important;
+        border-radius: 15px !important;
+    }
+
+    .getintouch {
+        font-size: 25px !important;
+        text-align: center ;
+    }
+
+    #submit_form, #box_form1 {
+        width:100%;
+        padding: 0 1em;
+    }
+
+    #box_form2 {
+        display:none !important;
+    }
+
+    .div5over {
+        width:100% !important;
+    }
+
+    .div5over > :first-child {
+        padding-right: 0% !important;
+    }
+
+    .div5, .div8, .div10 {
+        max-width: 100% !important;
+        width:100% !important;
+    }
+
+    .div8, .div10 {
+        padding-top: 5px !important;
+    }
+
+    #text_box, #text_box1 {
+        height: 30px;
+        width:100%;
+    }
+
+    #message {
+        height: 100px;
+    }
+
+
 
     div#slogan {
         margin: 0 0;
