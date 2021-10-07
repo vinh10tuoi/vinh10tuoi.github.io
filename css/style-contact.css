@@ -1,0 +1,181 @@
+@media only screen and (max-width: 1280px) {
+    #menu ul li a {
+        width:100%;
+    }
+
+    #menu ul {
+        width:100%;
+        padding-left:0;
+        display:inline-table;
+    }
+
+    #menu ul li {
+        width:20%;
+        padding-left:0;
+    } 
+
+    #menu .inside-item li {
+        width:100%;
+        padding-left:0;
+    } 
+
+    #content {
+        margin:0 0;
+        padding-top:0;
+    }
+}
+#menu {
+    padding: 0 0;
+}
+
+body {
+    background-color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:300;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:large;
+    color:#333;
+    line-height: 1.254;
+}
+
+#contact-us-img {
+    background-image: url(../img/contact.png);
+    background-attachment: fixed;
+    background-position:center;
+    background-repeat: no-repeat;
+    width:100%;
+    height:609px;
+}
+
+#contact-us {
+    text-align: center;
+    color: #4b4b4b;
+    font-size:4em;
+    font-family: 'Montserrat', sans-serif !important;  
+    font-weight: 300;     
+}
+div#submit_form {
+    padding: 1em 9em;
+    background-clip: content-box; 
+    background-color: #D3D3D3;
+    margin-bottom: 5em;
+}
+#submit_form ,#box_form1, #box_form2 {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+#box_form1, #box_form2 {
+    width:50%;
+    height:auto;
+}
+
+#box_form1 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 1.5em;
+    font-weight: 400;
+    color: #4b4b4b;
+    font-size:1.7rem;
+    display: block;
+}
+
+.getintouch {
+    font-family:'Montserrat', sans-serif !important;     
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 30px !important;
+}
+
+#box_form2 > img {
+    display: flex;
+    width:auto;
+    height:auto;
+    overflow: hidden;
+}
+
+#box_form1 label {
+    font-size:0.7em;
+}
+
+div.div5 {
+    box-sizing: border-box;
+    width:50%;
+    max-width: 50%;
+    margin: 0;
+    padding:0;
+    display:inline-block;
+}
+
+div.div5over {
+    width:96.5%;
+}
+
+div.div5over > :first-child {
+    padding-right: 0.8rem;
+    width:48%;
+}
+
+div.div8 {
+    max-width:95%;
+    margin: 0;
+    padding-top: 1em;
+}
+
+div.div10 {
+    max-width:95%;
+    margin: 0;
+    padding-top: 1em;
+}
+
+#text_box {
+    height:45px;
+    border-radius: 10px;
+    border: 1px solid white;    
+    width:98%;
+    margin-top:10px;
+}
+
+#text_box1 {
+    height:45px;
+    border-radius: 10px;
+    border: 1px solid white;    
+    width:100%;
+    margin-top:10px;
+}
+
+#message {
+    height: 200px;
+    width:100%;
+    border-radius: 10px;
+    border: 1px solid white;  
+    margin-top:10px;
+}
+
+.submit_button {
+    margin-top:1.5em;
+    margin-bottom: 1.5em;
+    right:0;
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+  
+  .submit_button:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-3px);
+  }

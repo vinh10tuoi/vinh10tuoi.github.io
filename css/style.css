@@ -1,0 +1,726 @@
+* {
+    box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+}
+
+body {
+    background-color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:300;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:large;
+    color:#333;
+    line-height: 1.254;
+}
+
+a {
+    text-decoration: none;
+    color:#3b8bba;
+    transition:all 0.5s;
+    -moz-trasition:all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+a:hover, a:visited {
+    color: #265778;
+}
+
+
+/*---Menu---*/
+/* Co dinh menu khi scroll */
+.sticky {
+    position: fixed;
+    top:0px;
+    margin:0 !important;
+    padding: 0 !important;
+    justify-content: space-between;
+    width:100%;
+    z-index:1000;
+    opacity: 0.8;
+    visibility:visible;
+}
+
+.stickyInside {
+    position: fixed;
+    top:80px;  
+    opacity: 1 !important;
+}
+
+/* Menu an khi dung dien thoai */
+#menu_mobile {
+    display:none;
+    background-color: #838383;
+    color:#fff;
+    font-size:1em;
+    padding:1em;
+    cursor:pointer;
+}
+
+/* Thiet ke thanh navigation */
+#nav_bar {
+    width:20px;
+    height:20px;
+    background: #838383;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    cursor: pointer;
+}
+
+#nav_bar::before {
+    content: "";
+    width: 12px;
+    height:1px;
+    background-color: #fff;
+    position:absolute;
+    transform: translateY(-3px);
+    transition: 0.25s ease-in-out;
+}
+
+#nav_bar::after {
+    content: "";
+    width: 12px;
+    height:1px;
+    background-color: #fff;
+    position:absolute;
+    transform: translateY(3px);
+    transition: 0.25s ease-in-out;
+}
+
+#nav_bar.open::before{
+    transform: rotate(45deg);
+}
+
+#nav_bar.open::after{
+    transform: rotate(-45deg);
+}
+
+
+#game_pad {
+    margin:auto;
+}
+
+/* Thiet ke menu */
+.menuMobileFix {
+    position: absolute !important;
+    width:100%;
+}
+
+
+#menu ul {
+    list-style-type:none;
+    text-align:center;
+    background-color:white;
+    padding:0;
+    margin: 0 !important;
+}
+
+#menu ul li {
+    line-height:80px;
+    width:240px;
+    height:80px;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    display:inline-table;
+    position: relative;
+    cursor: pointer;
+}
+
+#menu ul li a {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    display:block;
+    color:black;
+    text-decoration: none;
+}
+
+#menu ul li a:hover {
+    background:grey;
+    color:black;
+}
+
+/* Thiet ke ben trong menu product */
+.inside-item{
+    display:none;
+    width:100%;
+    text-align: center;
+    margin:0 !important;
+    padding:0;
+    position: absolute;
+    opacity: 0.8;
+    visibility: visible;
+}
+
+.inside-item-mobile {
+    position: relative;
+}
+
+/* Xu ly menu an khi dung thiet bi mobile */
+/* .inside-item-padding {
+    top:3.2em !important;
+}
+.inside-item-block {
+    position:static;
+    transition: all 1s;
+    display:content;
+}
+
+.inside-item-inherit {
+    position: inherit;
+}
+
+.navBarMobile {
+    padding:1em !important;
+    top:0px !important;
+    position:fixed;
+} */
+
+/*
+#menu ul li > .inside-item {
+    display:none;
+    position:absolute;
+    margin:0;
+    padding:0;
+}
+
+#menu ul li:hover > .inside-item {
+    display:block;
+}
+*/
+
+/*--End Menu--*/
+
+/*--Content--*/
+#content {
+     padding: 0em 3em 0em 3em;
+}
+div#header {
+    text-align: center;
+    border-radius: 15px;
+    margin-top:0;
+}
+
+#header{}
+#header #logo{}
+div#header, #slogan {
+    text-shadow:1px 1px 1px lightgray;
+    opacity: 1;
+    color:#8997a0;
+    font-size: 3em;
+    text-align: center;
+    margin:1.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#slogan {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 0.8;
+    margin:1.5em 1.5em 1.5em 1.5em;
+}
+/*--Xu ly anh nen dau tien--*/
+div#head-img {
+    display:flex;
+}
+
+div#head-img > img{
+    width:100%;
+    height:auto;
+    border-radius: 30px;
+    box-shadow:2px 2px 10px #d8d7d7;
+    overflow: hidden;
+}
+
+/*--xu ly layout-4x4--*/
+.layout-4x4 {
+    justify-content: center;
+    margin: auto;
+    width:100%;
+    height:100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    display:grid;
+    background-color:#fff;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.layout .box {
+    width: 50%;
+}
+
+.layout-4x4 img {
+    width: 100%;
+    height:100%;
+}
+
+/*--xử lý row--*/
+.row {
+    text-align: center;
+    padding:0;
+    overflow: hidden;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.row .col {
+    padding:0;
+    width:100%;
+}
+
+.row .col > h2 {
+    text-align:center;
+}
+
+.row > img {
+    display:inline-block;
+}
+
+#intro p {
+    font-size:1.2em;
+    width:100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.c4-izmir-caption {
+    font-size:1.2em;
+    cursor:pointer;
+}
+
+.c4-izmir-caption:hover {
+    color:lightskyblue;
+}
+
+#intro #img-3 {
+    align-items:center;
+    display:flex;
+    justify-content: center;
+    width:100%;
+    height:100%;
+}
+
+#intro {
+    max-width: 100%;
+    width: 100%;
+    height:auto;
+    overflow: auto;
+    padding-bottom: 3em;
+   }   
+ 
+#intro #box1{
+    float:left;
+    max-width: 33%;
+    width: 30%;
+    height:50%;
+}  
+#intro #box2{
+    float:left;
+    max-width: 33%;
+    width: 30%;
+    height:50%;
+}  
+#intro #box3{
+    float:right;
+    max-width: 33%;
+    width: 30%;
+    height:50%;
+}  
+
+#intro .first3word {
+    text-align:center;
+}
+/*--san-pham--*/
+#product {
+    font-size:50px;
+    border-top: 2px solid#D8D7D7;
+    text-align:center;
+    padding:70px;
+}
+/*--gamingpc--*/
+div#gaming-pc {
+    font-size:50px;
+    border-top: 2px solid #d8d7d7;
+    text-align:center;
+    padding:70px;
+}
+
+div#ultrabook {
+    font-size:50px;
+    border-top: 2px solid #d8d7d7;
+    text-align:center;
+    padding:70px;
+}
+
+div#console {
+    font-size:50px;
+    border-top: 2px solid #d8d7d7;
+    text-align:center;
+    padding:70px;
+}
+
+/*Phan-xu-ly-layout*/ 
+.grid-layout {
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1.8em; */
+    grid-gap: 1em;
+  }
+  
+.grid-item {
+    width:24.22%;
+    height: auto;
+    padding: 0.5em;
+    border-radius: 15px;
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,0.1);
+    transition: transform linear 0.1s;
+    will-change: transform;
+}
+
+/* Hover mot san pham */
+.grid-item:hover {
+    background:lightgray;;
+    color:#DC143C;
+    transition: all 1s !important;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    transform:scale(1.03);
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,0.005);
+}
+
+.pc-item {
+    position: relative;
+}
+
+.grid-item:hover .item-info h5{
+    padding-top:45%;
+}
+
+/* Hover chi tiet- phan xu li hover */
+.grid-item:hover .item-info {
+    transition: all 0.5s ease-in-out !important;
+    align-content: center;
+    border-radius: 15px;
+    margin-bottom:110px;
+    background-color: #fff;
+    /* background: linear-gradient(to left, #8e9eab, #eef2f3);     */
+    opacity:0.7;
+    color:red;  
+    display:block;
+    top:0%;
+}
+
+/* Xu kt layout ten gia san pham */
+.grid-layout .item-name {
+    justify-content: center;
+    display:flex;
+    opacity: 0.9;
+    font-weight: 900;
+    text-align: center; 
+    font-size: 1em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grid-layout h5 {
+    font: 1em sans-serif;
+    margin:auto;
+}
+
+.grid-layout .pc-item-img {
+    display:block;
+    max-height: 500px;
+
+}
+
+.grid-layout .item-img {
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+/* Hover chi tiet san pham */
+div.item-info {
+    cursor: pointer;
+    position:absolute;
+    display: none;
+    width:100%;
+    text-align: center;
+    bottom: 0px;
+    transition: 0.3s !important;
+}
+
+/* Tao category san pham */
+.category {
+    position: relative;
+}
+
+.tag {
+    opacity: 0.6;
+    color:black !important;
+}
+
+/* Xu ly quantity selection */
+.quantity {
+    position:absolute;
+    right: 0;
+    top: 35px; 
+}
+
+.quantity > label {
+    color:black !important;
+    opacity: 0.6;
+}
+
+.quantity select {
+    width: 60px;
+    border-radius: 10px;
+    border-color:#80c402;
+}
+
+/* Tab Stock: Desktop, Laptop, Console */
+.availability {
+    color:black !important;
+    opacity: 0.6;
+    position: absolute;
+    right:4em;
+    top: -15px;
+}
+
+.stock {
+    color:#80c402;
+    position: absolute;
+    right: 0%;
+    top: -15px;
+}
+
+/* Xu ly Color Dot Selection */
+.colorPick {
+    position: absolute;
+    right: 0px;
+    bottom:-35px;
+}
+
+.color {
+    color:black !important;
+    opacity: 0.6;
+}
+
+input[type='radio'] {
+    margin:0 5px 5px 5px;
+}
+
+input[name='gender']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+/* Color: Silver */
+input[name='gender1']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: black;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+/* Color : Spacegray */
+input[name='gender2']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: gray;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+/* Color: Gold */
+input[name='gender3']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: gold;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+/* input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+} */
+
+/* .item-info:hover {
+    position:absolute;
+    display:block !important;
+    z-index:99;
+    width:100%;
+    text-align: center;
+
+} */
+
+.grid-layout .item-price {
+    display:flex;
+    flex-wrap: wrap;
+    font-weight: 500;
+    margin: 0 0 18px 0;
+    font-size:1.2em;
+    color:#80c402;
+}
+
+/* Design nut buy */
+.button {
+    float:left;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 17px;
+    line-height: 1.17648;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    min-width: 28px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 980px;
+    background: #0071e3;
+    color: white;
+}
+
+
+/*--Phan-Footer--*/
+#footer {
+    font-size:85%;
+    color:#838383;
+    padding:1em 0em;
+    background-color:#f5f5f7;
+}
+
+#footer ul {
+    padding-left:2%;
+}
+
+#upImg {
+    display:block;
+    position: fixed;
+    opacity: 0.7;
+    z-index:99;
+    right:0px;
+    bottom:0px;
+    width:50px;
+    height:50px;
+    border-radius: 10px;    
+}
+
+#upImg:hover {
+    background:#D8d7d7;
+    transition:all 1s;
+    border-radius: 15px;
+}
+
+#footer ul li {
+    display:inline-table;
+    width:33%;
+    height:30%;
+    line-height: 100%;
+    padding-right:1em;
+}
+
+#footer ul li a {
+    text-decoration: none;
+}
+
+/*--underfooter--*/
+div#underfooter {
+    justify-content:space-between;
+    font-size:100%;
+    color:#838383;
+    padding:0;
+    display:flex;
+}
+
+.copyright {
+    text-align:center;
+    font-size:100%;
+    color:#838383;
+}
+
+div#underfooter div {
+    width:10%;
+    padding:0.5em;
+}
+
+#brand-icon {
+    image-rendering:optimizeQuality;
+    width:100%;
+    padding:2em;
+}
+
+#footer ul .box-1 {
+    padding-right:0;
+}
+
+#footer ul .box-2 {
+    padding-right:4%;
+}
+
+#footer ul .box-2 > p{
+    font-size:110%;
+    white-space: 10px;
+    line-height: 120%;
+}
+
+
+
+
+
+
+
+

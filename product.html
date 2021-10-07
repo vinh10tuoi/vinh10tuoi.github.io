@@ -6,63 +6,39 @@
         <meta name="gaming" name="game thu" content ="Gaming Gear" />
         <meta http-equiv="refresh" content="1800"/>
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <link href = "img/icon1.jpg" rel = "shortcut icon"/>
         <title>
             Product
         </title>
-        <link rel="stylesheet" href="style.css"/> <!--style css-->
-        <link rel="stylesheet" href="style-product.css"/> <!--style product css-->
-        <link rel="stylesheet" href="normalize.css"/> <!--reset css-->
-        <link rel="stylesheet" href="mobile.css"/> <!--Resposive-->
-        <script src="js/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.7/dist/sweetalert2.min.css"/>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+        <link rel="stylesheet" href="css/style.css"/> <!--style css-->
+        <link rel="stylesheet" href="css/style-product.css"/> <!--style product css-->
+        <link rel="stylesheet" href="css/normalize.css"/> <!--reset css-->
+        <link rel="stylesheet" href="css/mobile.css"/> <!--Resposive-->
+        <script src="js/jquery-3.6.0.min.js"></script><!--jquery-->
+        <link rel="stylesheet" href="css/animate.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.7/dist/sweetalert2.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="js/wow.min.js"></script><!--Wow.js-->
+              <script>
+                    wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+              </script>
         <!--JQuerry-->
-        <script>
-            $(document).ready(function() {
-                $("#upImg").hide()
-
-                $(window).scroll(function () {
-                    if($(this).scrollTop() >= 500   )
-                        $("#upImg").show("slow")
-                    else
-                        $("#upImg").hide("slow")
-                })
-
-                $("#upImg").click(function() {
-                    $("html, body").animate({
-                        scrollTop: 0
-                    },1000)
-                })
-            });
-
-            $(document).ready(function() {
-                $("#nav_bar").click(function() {
-                    $("nav#menu").slideToggle();
-                })
-            })
-
-            $(document).ready(function() {
-                $("#nav_bar").click(function() {
-                    $("#nav_bar").toggleClass("open");
-                })
-            })
-
-            $(document).ready(function() {
-                $(".insidemenu_product").click(function() {
-                    $("div.inside-item-div").slideToggle();
-                })
-            })
-
-            $(document).ready(function () {
-                $(".button").click(function() {
-                    alert(".button")
-                })
-            })
-        </script>
     </head>
     <body>
+        <script type="text/javascript" src="js/main.js"></script>  
         <div>
             <a id = "gototop" href="javascript:;"><img id ="upImg" src ="img/button.png"> </a>
         </div>
@@ -111,19 +87,39 @@
             <div class = "grid_row">
                 <div class="grid_col1">
                     <div class = "pc-item">
-                        <div class="pc-item-img">
+                        <div class="pc-item-img"> 
                             <img class = "item-img" src="img/meg5x5.png"/>
-                        </div>
                         <h4 class="item-name">MSI MEG TRIDENT X 11th</h4>
-                        <h5>
-GPU : Nvidia GeForce RTX 3080
-<br>
-Processor: Intel Core i7-11700K
-<br>
-Ram: 32GB
-                        </h5>
-                        <p class="item-price">Price: $2799</p>
-                        <a class="button">Buy</a>
+                        </div>
+                        <div class="item-info">
+                            <h5>
+        GPU : Nvidia GeForce RTX 3080
+        <br>
+        Processor: Intel Core i7-11700K
+        <br>
+        Ram: 32GB
+                            </h5>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Desktop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$2799</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                            <label class="color">Color:</label>
+                                <input type='radio' name="gender"/>
+                                <input type='radio' name="gender1"/>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -136,6 +132,7 @@ Ram: 32GB
                             <img class = "item-img" src="img/codexx5.png"/>
                         </div>
                         <h4 class="item-name">MSI MEG CODEX X5 11th</h4>
+                        <div class="item-info">
                         <h5>
 GPU: Nvidia GeForce 3070
 <br>
@@ -143,8 +140,27 @@ Processor: Intel Core i7-11700
 <br>
 Ram: 32GB
                         </h5>
-                        <p class="item-price">Price: $2599</p>
-                        <a class="button">Buy</a>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Desktop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$2599</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender1"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -157,6 +173,7 @@ Ram: 32GB
                             <img class = "item-img" src="img/aegis1.png"/>
                         </div>
                         <h4 class="item-name">MSI MEG AEGIS Ti5 11th</h4>
+                        <div class="item-info">
                         <h5>
 GPU: Nvidia GeForce RTX 3090
 <br>
@@ -164,8 +181,27 @@ Processor: Intel Core i9-11900K
 <br>
 Ram: 32GB
                         </h5>
-                        <p class="item-price">Price: $4000</p>
-                        <a class="button">Buy</a>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Desktop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$4000</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender1"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -178,6 +214,7 @@ Ram: 32GB
                             <img class = "item-img" src="img/orion90000.png"/>
                         </div>
                         <h4 class="item-name">ACER PREDATOR ORION 9000</h4>
+                        <div class="item-info">
                         <h5>
 GPU: Nvidia GeForce RTX 3090
 <br>
@@ -185,8 +222,27 @@ Processor: Intel Core i9-10900X
 <br>
 Ram: 64GB
                         </h5>
-                        <p class="item-price">Price: $5099</p>
-                        <a class="button">Buy</a>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Desktop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$5099</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender1"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -199,6 +255,7 @@ Ram: 64GB
                             <img class = "item-img" src="img/predator-orion-5000-po5-605s-gallery-02_1.png"/>
                         </div>
                         <h4 class="item-name">ACER PREDATOR ORION 5000</h4>
+                        <div class="item-info">
                         <h5>
 GPU: Nvidia GeForce RTX 2080Ti
 <br>
@@ -206,8 +263,27 @@ Processor: Intel Core i7-9700K
 <br>
 Ram: 16GB
                         </h5>
-                        <p class="item-price">Price: $2399</p>
-                        <a class="button">Buy</a>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Desktop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$2399</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender1"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -220,6 +296,7 @@ Ram: 16GB
                             <img class = "item-img" src="img/r122-removebg-preview.png"/>
                         </div>
                         <h4 class="item-name">ALIENWARE AURORA R12</h4>
+                        <div class="item-info">
                         <h5>
 GPU: Nvidia GeForce RTX 3070
 <br>
@@ -227,8 +304,27 @@ Processor: Intel Core i7-11700KF
 <br> 
 Ram: 32GB
                         </h5>
-                        <p class="item-price">Price: $2799</p>
-                        <a class="button">Buy</a>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Desktop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$2799</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender1"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -241,6 +337,7 @@ Ram: 32GB
                             <img class = "item-img" src="img/unnamed-removebg-preview.png"/>
                         </div>
                         <h4 class="item-name">ASUS ROG HURACAN G21CX</h4>
+                        <div class="item-info">
                         <h5>
 GPU: Nvidia GeForce RTX 3070
 <br>
@@ -248,8 +345,27 @@ Processor: Intel Core i9-9900K
 <br>
 Ram: 32GB
                         </h5>
-                        <p class="item-price">Price: $3099</p>
-                        <a class="button">Buy</a>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Desktop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$3099</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender1"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -262,6 +378,7 @@ Ram: 32GB
                             <img class = "item-img" src="img/375F6A34-6416-40B9-AA51-8C36667FCEC6.png"/>
                         </div>
                         <h4 class="item-name">ASUS ROG STRIX GT35 </h4>
+                        <div class="item-info">
                         <h5>
 GPU: Nvidia GeForce RTX 3080Ti
 <br>
@@ -269,8 +386,27 @@ Processor: Intel Core i9-10900KF
 <br>
 Ram: 32GB
                         </h5>
-                        <p class="item-price">Price: $3799</p>
-                        <a class="button">Buy</a>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Desktop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$3799</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender1"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -283,6 +419,7 @@ Ram: 32GB
                             <img class = "item-img" src="img/nzxtrgb.png"/>
                         </div>
                         <h4 class="item-name">NZXT Creator RGB </h4>
+                        <div class="item-info">
                         <h5>
 GPU: Nvidia GeForce RTX 3090
 <br>
@@ -290,8 +427,27 @@ Processor: Intel Core i9-11900K
 <br>
 Ram: 64GB
                         </h5>
-                        <p class="item-price">Price: $3999</p>
-                        <a class="button">Buy</a>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Desktop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$3999</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender1"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -314,6 +470,7 @@ Ram: 64GB
                             <img class = "item-img" src="img/637407967465471535_mba-2020-gold-1-removebg-preview.png"/>
                         </div>
                         <h4 class="item-name">MacBook Air M1 2020</h4>
+                        <div class="item-info">
                         <h5>
 13.3" Retina Display
 <br>
@@ -321,8 +478,28 @@ Processor: Apple M1
 <br>
 Ram: 16GB
                         </h5>
-                        <p class="item-price">Price: $1649</p>
-                        <a class="button">Buy</a>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Laptop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$1649</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender2"/>
+                                    <input type='radio' name="gender3"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -335,6 +512,7 @@ Ram: 16GB
                             <img class = "item-img" src="img/resize.png"/>
                         </div>
                         <h4 class="item-name">MacBook Pro 13" 2020</h4>
+                        <div class="item-info">
                         <h5>
 13.3" Retina Dislay
 <br>
@@ -342,8 +520,28 @@ Processor: Apple M1
 <br>
 Ram: 16GB
                         </h5>
-                        <p class="item-price">Price: $2699</p>
-                        <a class="button">Buy</a>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Laptop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$2699</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender2"/>
+                                    <input type='radio' name="gender3"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -356,6 +554,7 @@ Ram: 16GB
                             <img class = "item-img" src="img/500x500.png"/>
                         </div>
                         <h4 class="item-name">MacBook Pro 16" 2020</h4>
+                        <div class="item-info">
                         <h5>
 16" Retina Display
 <br>
@@ -365,8 +564,28 @@ Processor: 8-core Intel Core i9
 <br>
 Ram: 64GB
                         </h5>
-                        <p class="item-price">Price: $6699</p>
-                        <a class="button">Buy</a>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Laptop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$6699</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender2"/>
+                                    <input type='radio' name="gender3"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -379,6 +598,7 @@ Ram: 64GB
                             <img class = "item-img" src="img/XPS-17-1200x1200-removebg-preview.png"/>
                         </div>
                         <h4 class="item-name">DELL XPS 17 9700</h4>
+                        <div class="item-info">
                         <h5>
 17" UHD+ Display 
 <br>
@@ -388,8 +608,28 @@ Processor: Intel Core i9-10885H
 <br>
 Ram: 32GB
                         </h5>
-                        <p class="item-price">Price: $3399</p>
-                        <a class="button">Buy</a>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Laptop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$3399</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender2"/>
+                                    <input type='radio' name="gender3"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -402,6 +642,7 @@ Ram: 32GB
                             <img class = "item-img" src="img/proart.png"/>
                         </div>
                         <h4 class="item-name">ASUS ProArt StudioBook 17</h4>
+                        <div class="item-info">
                         <h5>
 17" WUXGA Anti-Glare Display
 <br>
@@ -411,8 +652,28 @@ Processor: Intel Core i7-9750H
 <br>
 Ram: 16GB ECC DDR4
                         </h5>
-                        <p class="item-price">Price: $2399</p>
-                        <a class="button">Buy</a>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Laptop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$2399</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender2"/>
+                                    <input type='radio' name="gender3"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -425,14 +686,38 @@ Ram: 16GB ECC DDR4
                             <img class = "item-img" src="img/razer.png"/>
                         </div>
                         <h4 class="item-name">RAZER Blade Pro 17 2020</h4>
-                        <pre>
+                        <div class="item-info">
+                        <h5>
 17.3" 300Hz Full HD Display
+<br>
 GPU: Nvidia GeForce RTX 2080S 
-Processor: Intel Core i7-10750H  
+<br>
+Processor: Intel Core i7-10750H
+<br>
 Ram: 16GB
-                        </pre>
-                        <p class="item-price">Price: $3099</p>
-                        <a class="button">Buy</a>
+                        </h5>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Laptop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$3099</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender2"/>
+                                    <input type='radio' name="gender3"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -445,14 +730,38 @@ Ram: 16GB
                             <img class = "item-img" src="img/zzzzzz.png"/>
                         </div>
                         <h4 class="item-name">MSI Creator 17 2020</h4>
-                        <pre>
+                        <div class="item-info">
+                        <h5>
 17" UHD Display
+<br>
 GPU: Nvidia GeForce RTX 3080 
+<br>
 Processor: Intel Core i9-11900H
+<br>
 Ram: 32GB
-                        </pre>
-                        <p class="item-price">Price: $4199</p>
-                        <a class="button">Buy</a>
+                        </h5>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Laptop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$4199</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender2"/>
+                                    <input type='radio' name="gender3"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -465,12 +774,17 @@ Ram: 32GB
                             <img class = "item-img" src="img/x1com.png"/>
                         </div>
                         <h4 class="item-name">LENOVO ThinkPad X1 Carbon </h4>
-                        <pre>
+                        <div class="item-info">
+                        <h5>
 15.6" Full HD Display
+<br>
 GPU: Nvidia GeForce GTX 1650Ti
+<br>
 Processor: Intel Core i9-10885H
+<br>
 Ram: 32GB
-                        </pre>
+                        </h5>
+                        </div>
                         <p class="item-price">Price: $2199</p>
                         <a class="button">Buy</a>
                     </div>
@@ -485,14 +799,38 @@ Ram: 32GB
                             <img class = "item-img" src="img/surfacebook.png"/>
                         </div>
                         <h4 class="item-name">MICROSOFT Surface Book 15 </h4>
-                        <pre>
+                        <div class="item-info">
+                        <h5>
 15” PixelSense™ Display
+<br>
 GPU: Nvidia GeForce RTX 1660Ti 
+<br>
 Processor: Intel Core i7 1065G7
+<br>
 Ram: 32GB
-                        </pre>
-                        <p class="item-price">Price: $4199</p>
-                        <a class="button">Buy</a>
+                        </h5>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Laptop</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$4199</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender2"/>
+                                    <input type='radio' name="gender3"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -514,14 +852,37 @@ Ram: 32GB
                             <img class = "item-img" src="img/ps5.png"/>
                         </div>
                         <h4 class="item-name">PlayStation 5</h4>
-                        <pre>
+                        <div class="item-info">
+                        <h5>
 Storage: 825GB SSD
+<br>
 GPU: 10.28 TFLOPs RDNA 2
+<br>
 Processor: AMD Zen-2 
+<br>
 Ram: 16GB
-                        </pre>
-                        <p class="item-price">Price: $499</p>
-                        <a class="button">Buy</a>
+                        </h5>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Console</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$499</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender1"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -534,14 +895,37 @@ Ram: 16GB
                             <img class = "item-img" src="img/ps4_pro.png"/>
                         </div>
                         <h4 class="item-name">PlayStation 4 Pro</h4>
-                        <pre>
+                        <div class="item-info">
+                        <h5>
 Storage: 1TB HDD
+<br>
 GPU: 4.2 TFLOPs RDNA 2
+<br>
 Processor: 2.1 Ghz 8-core AMD 
+<br>
 Ram: 8GB
-                        </pre>
-                        <p class="item-price">Price: $449</p>
-                        <a class="button">Buy</a>
+                        </h5>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Console</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$449</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender1"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -554,14 +938,37 @@ Ram: 8GB
                             <img class = "item-img" src="img/ps4_slim.png"/>
                         </div>
                         <h4 class="item-name">PlayStation 4 Slim</h4>
-                        <pre>
+                        <div class="item-info">
+                        <h5>
 Storage: 1TB HDD
+<br>
 GPU: 4.2 TFLOPs RDNA 2
+<br>
 Processor: 2.1 Ghz 8-core AMD 
+<br>
 Ram: 8GB
-                        </pre>
-                        <p class="item-price">Price: $419</p>
-                        <a class="button">Buy</a>
+                        </h5>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Console</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$419</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender1"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -574,14 +981,37 @@ Ram: 8GB
                             <img class = "item-img" src="img/xboxonex.png"/>
                         </div>
                         <h4 class="item-name">XBOX One Series X</h4>
-                        <pre>
+                        <div class="item-info">
+                        <h5>
 Storage: 1TB SSD
+<br>
 GPU: 12 TFLOPs RDNA 2
+<br>
 Processor: 8-core 3.8Ghz AMD Zen-2
+<br>
 Ram: 16GB
-                        </pre>
-                        <p class="item-price">Price: $699</p>
-                        <a class="button">Buy</a>
+                        </h5>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Console</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$699</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender1"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -594,14 +1024,37 @@ Ram: 16GB
                             <img class = "item-img" src="img/Xbox Series S 512GB c-800x800.jpg"/>
                         </div>
                         <h4 class="item-name">XBOX Series S</h4>
-                        <pre>
+                        <div class="item-info">
+                        <h5>
 Storage: 1TB SSD
+<br>
 GPU: 1.4 TFLOPs RDNA 2
+<br>
 Processor: 8-core 1.7 Ghz AMD 
+<br>
 Ram: 8GB
-                        </pre>
-                        <p class="item-price">Price: $399</p>
-                        <a class="button">Buy</a>
+                        </h5>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Console</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$399</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender1"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -614,14 +1067,37 @@ Ram: 8GB
                             <img class = "item-img" src="img/xbox_seriesS.png"/>
                         </div>
                         <h4 class="item-name">Xbox One Series S</h4>
-                        <pre>
+                        <div class="item-info">
+                        <h5>
 Storage: 1TB SSD
+<br>
 GPU: 4 TFLOPs RDNA 2
+<br>
 Processor: 8-core 3.6Ghz AMD Zen-2
+<br>
 Ram: 10GB
-                        </pre>
-                        <p class="item-price">Price: $449</p>
-                        <a class="button">Buy</a>
+                        </h5>
+                        </div>
+                        <div class="category">
+                            <p class="tag">Console</p>
+                            <p class="availability">Availability:</p>
+                            <p class="stock">In Stock</p>
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <p class="item-price">$449</p>  
+                            <a class="button" onclick="sweet()">Buy</a>
+                            <div class="colorPick">
+                                <label class="color">Color:</label>
+                                    <input type='radio' name="gender"/>
+                                    <input type='radio' name="gender1"/>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -632,16 +1108,16 @@ Ram: 10GB
     <!--Phan cuoi web-->
     <div id="footer">
         <ul>
-            <li class="box-1">
+            <li class="wow fadeInLeft" class="box-1">
                 <h2 id="contact">Our Location</h2>
                 <p><i id="icon" class="fa fa-location-arrow"></i> : 371 Nguyen Kiem, Ward 3, Go Vap District</p>
                 <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9251197291946!2d106.67491891523737!3d10.817042392293988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e1f241211f%3A0xc9ef195798144b1f!2sHo%20Chi%20Minh%20City%20Open%20University!5e0!3m2!1sen!2s!4v1626953478520!5m2!1sen!2s" width="90%" height="110%" style="border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
             </li>
-            <li class="box-2">
+            <li class="wow fadeInUp" class="box-2">
                 <h2 id="about-us">About US</h2>
                 <p style="text-align: justify;">As a world leading gaming brand, Gaming Ace is the most trusted name in gaming and eSports. We’ve dedicated countless hours and numerous resources to the eSports community to support the world’s most aspiring gamers and leverage their gaming expertise to optimize our product design. MSI has integrated all gamers’ coveted functions into its gaming rigs, eliminating the tedious trial and error by themselves and pushing the performance beyond limits. The determination to surpass past achievements has made MSI a ‘True Gaming’ brand throughout the industry!</p>
             </li>
-            <li class="box-3">
+            <li class="wow fadeInRight" class="box-3">
                 <h2 id="contact">Contact US</h2>
                 <p>
                     <span><i id ="icon" class="fas fa-phone-alt"></i></span>
@@ -670,18 +1146,20 @@ Ram: 10GB
         </ul>
     </div>
     <!--Underfooter-->
-    <div id = "underfooter">
+    <div class="copyright" class="wow fadeInUp">   
         <p>Copyright &copy; 2021 Truong Quoc Vinh</p>
-        <span> <img id="brand-icon" src="img/msiicon.png"/> </span>
-        <span> <img id="brand-icon" src="img/asusicon.png"/> </span>
-        <span> <img id="brand-icon" src="img/alw.png "/> </span>
-        <span> <img id="brand-icon" src="img/nzxt logo.jpg"/> </span>
-        <span> <img id="brand-icon" src="img/Apple-Logo-1.png"/> </span>
-        <span> <img id="brand-icon" src="img/Microsoft-Logo-dumps-questions.jpg"/> </span>
-        <span> <img id="brand-icon" src="img/download.png"/> </span>
-        <span> <img id="brand-icon" src="img/nitendo.png"/> </span>
-        <span> <img id="brand-icon" src="img/xboxlogo.jpg"/> </span>
-        <span> <img id="brand-icon" src="img/Sony-logo.jpg"/> </span>
+    </div>
+    <div class="wow fadeInUp" id = "underfooter">
+        <div> <img id="brand-icon" src="img/msiicon.png"/> </div>
+        <div> <img id="brand-icon" src="img/asusicon.png"/> </div>
+        <div> <img id="brand-icon" src="img/alw.png "/> </div>
+        <div> <img id="brand-icon" src="img/nzxt logo.jpg"/> </div>
+        <div> <img id="brand-icon" src="img/Apple-Logo-1.png"/> </div>
+        <div> <img id="brand-icon" src="img/Microsoft-Logo-dumps-questions.jpg"/> </div>
+        <div> <img id="brand-icon" src="img/download.png"/> </div>
+        <div> <img id="brand-icon" src="img/nitendo.png"/> </div>
+        <div> <img id="brand-icon" src="img/xboxlogo.jpg"/> </div>
+        <div> <img id="brand-icon" src="img/Sony-logo.jpg"/> </div>
     </div>
 </div>
     </body>

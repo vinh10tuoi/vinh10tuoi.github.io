@@ -15,53 +15,29 @@
         <title>
             Demo Website!!
         </title>
-        <link rel="stylesheet" href="style.css"/> <!--style css-->
-        <link rel="stylesheet" href="normalize.css"/> <!--reset css-->
-        <link rel="stylesheet" href="mobile.css"/> <!--Resposive-->
-        <link rel='stylesheet' href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+        <link rel="stylesheet" href="css/style.css"/> <!--style css-->
+        <link rel="stylesheet" href="css/normalize.css"/> <!--reset css-->
+        <link rel="stylesheet" href="css/mobile.css"/> <!--Resposive-->
+        <link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+        <script src="js/wow.min.js"></script><!--Wow.js-->
+              <script>
+                    wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+              </script>
         <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script> <!--Wowjs-->
         <script src="js/jquery-3.6.0.min.js"></script>
-        <!--JQuerry-->
-        <script> new WOW().init(); </script> <!--call wowjs-->
-        <script>
-            $(document).ready(function() {
-                $("#upImg").hide()
-
-                $(window).scroll(function () {
-                    if($(this).scrollTop() >= 500   )
-                        $("#upImg").show("slow")
-                    else
-                        $("#upImg").hide("slow")
-                })
-
-                $("#upImg").click(function() {
-                    $("html, body").animate({
-                        scrollTop: 0
-                    },1000)
-                })
-            });
-
-            $(document).ready(function() {
-                $("#nav_bar").click(function() {
-                    $("nav#menu").slideToggle();
-                })
-            })
-
-            $(document).ready(function() {
-                $("#nav_bar").click(function() {
-                    $("#nav_bar").toggleClass("open");
-                })
-            })
-
-            $(document).ready(function() {
-                $(".insidemenu_product").click(function() {
-                    $("div.inside-item-div").slideToggle();
-                })
-            })
-        </script>
     </head>
     <!--Phan chu to nhat web ^^-->
     <body>
+        <script type="text/javascript" src="js/main.js"></script>  
         <div>
             <a id = "gototop" href="javascript:;"><img id ="upImg" src ="img/button.png"> </a>
         </div>
@@ -83,11 +59,9 @@
             <li>
                 <a class = "insidemenu_product" href ="#product"> Product </a>
                 <ul class="inside-item">
-                <div class="inside-item-div">
-                    <li><a href="product.html#gaming-pc" href="#gaming-pc">Gaming PC</a></li>
-                    <li><a href="product.html#ultrabook" href="#ultrabook">Ultrabook</a></li>
-                    <li><a href="product.html#console" href="#console">Console</a></li>
-                </div>
+                        <li><a href="product.html#gaming-pc" href="#gaming-pc">Gaming PC</a></li>
+                        <li><a href="product.html#ultrabook" href="#ultrabook">Ultrabook</a></li>
+                        <li><a href="product.html#console" href="#console">Console</a></li>
                 </ul>
             </li>
             <li><a href ="news.html"> News </a></li>
@@ -99,9 +73,9 @@
     <div id="content">
         <div id="header">
             <div id="logo"><img src="img/joystick.png " width="600px" height="400px" alt="Vinh Gaming Web"> </div>
-            <div>
-                <p>GAMERS DON'T DIE. THEY RESPAWN!</p>
-            </div>
+        </div>
+        <div id="slogan">
+            <p>GAMERS DON'T DIE. THEY RESPAWN!</p>
         </div>
         <div class="wow fadeInDown" id ="head-img">
             <img src="img/shutterstock_gamer.jpg"/>
@@ -177,16 +151,16 @@
 <!--Phan cuoi web-->
 <div id="footer">
     <ul>
-        <li class="box-1">
+        <li class="wow fadeInLeft" class="box-1">
             <h2 id="contact">Our Location</h2>
             <p><i id="icon" class="fa fa-location-arrow"></i> : 371 Nguyen Kiem, Ward 3, Go Vap District</p>
-            <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9251197291946!2d106.67491891523737!3d10.817042392293988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e1f241211f%3A0xc9ef195798144b1f!2sHo%20Chi%20Minh%20City%20Open%20University!5e0!3m2!1sen!2s!4v1626953478520!5m2!1sen!2s" width="90%" height="110%" style="border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9251197291946!2d106.67491891523737!3d10.817042392293988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e1f241211f%3A0xc9ef195798144b1f!2sHo%20Chi%20Minh%20City%20Open%20University!5e0!3m2!1sen!2s!4v1626953478520!5m2!1sen!2s" width="100%" height="100%" style="border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
         </li>
-        <li class="box-2">
+        <li class="wow fadeInUp" class="box-2">
             <h2 id="about-us">About US</h2>
             <p style="text-align: justify;">As a world leading gaming brand, Gaming Ace is the most trusted name in gaming and eSports. We’ve dedicated countless hours and numerous resources to the eSports community to support the world’s most aspiring gamers and leverage their gaming expertise to optimize our product design. MSI has integrated all gamers’ coveted functions into its gaming rigs, eliminating the tedious trial and error by themselves and pushing the performance beyond limits. The determination to surpass past achievements has made MSI a ‘True Gaming’ brand throughout the industry!</p>
         </li>
-        <li class="box-3">
+        <li class="wow fadeInRight" class="box-3">
             <h2 id="contact">Contact US</h2>
             <p>
                 <span><i id ="icon" class="fas fa-phone-alt"></i></span>
@@ -215,18 +189,20 @@
     </ul>
 </div>
 <!--Underfooter-->
-<div id = "underfooter">
+<div class="copyright" class="wow fadeInUp">   
     <p>Copyright &copy; 2021 Truong Quoc Vinh</p>
-    <span> <img id="brand-icon" src="img/msiicon.png"/> </span>
-    <span> <img id="brand-icon" src="img/asusicon.png"/> </span>
-    <span> <img id="brand-icon" src="img/alw.png "/> </span>
-    <span> <img id="brand-icon" src="img/nzxt logo.jpg"/> </span>
-    <span> <img id="brand-icon" src="img/Apple-Logo-1.png"/> </span>
-    <span> <img id="brand-icon" src="img/Microsoft-Logo-dumps-questions.jpg"/> </span>
-    <span> <img id="brand-icon" src="img/download.png"/> </span>
-    <span> <img id="brand-icon" src="img/nitendo.png"/> </span>
-    <span> <img id="brand-icon" src="img/xboxlogo.jpg"/> </span>
-    <span> <img id="brand-icon" src="img/Sony-logo.jpg"/> </span>
+</div>
+<div class="wow fadeInUp" id = "underfooter">
+    <div> <img id="brand-icon" src="img/msiicon.png"/> </div>
+    <div> <img id="brand-icon" src="img/asusicon.png"/> </div>
+    <div> <img id="brand-icon" src="img/alw.png "/> </div>
+    <div> <img id="brand-icon" src="img/nzxt logo.jpg"/> </div>
+    <div> <img id="brand-icon" src="img/Apple-Logo-1.png"/> </div>
+    <div> <img id="brand-icon" src="img/Microsoft-Logo-dumps-questions.jpg"/> </div>
+    <div> <img id="brand-icon" src="img/download.png"/> </div>
+    <div> <img id="brand-icon" src="img/nitendo.png"/> </div>
+    <div> <img id="brand-icon" src="img/xboxlogo.jpg"/> </div>
+    <div> <img id="brand-icon" src="img/Sony-logo.jpg"/> </div>
 </div>
 </div>
 </body>
