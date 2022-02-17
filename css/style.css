@@ -116,6 +116,7 @@ a:hover, a:visited {
     background-color:white;
     padding:0;
     margin: 0 !important;
+    z-index: 99;
 }
 
 #menu ul li {
